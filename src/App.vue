@@ -20,6 +20,7 @@ export default {
         .then(response => {
           console.log(response);
           store.characters = response.data
+          store.charactersLength = response.data.length
         })
         .catch(err => {
           console.error(err.message);
