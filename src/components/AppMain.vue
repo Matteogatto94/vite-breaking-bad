@@ -1,10 +1,13 @@
 <script>
+import CharactersList from './CharactersList.vue'
 import SelectForm from './SelectForm.vue'
 export default {
     name: 'AppMain',
     components: {
-        SelectForm
+        SelectForm,
+        CharactersList
     }
+
 }
 </script>
 
@@ -13,6 +16,9 @@ export default {
     <main>
 
         <SelectForm />
+        <CharactersList />
+
+
 
     </main>
 
