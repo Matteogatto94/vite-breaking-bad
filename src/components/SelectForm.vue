@@ -1,17 +1,22 @@
 <script>
+import { store } from '../store.js'
 export default {
-    name: 'SelectForm'
+    name: 'SelectForm',
+    data() {
+        return {
+            store
+        }
+    }
 }
 </script>
 
 <template>
 
     <div class="container">
-        <select>
+        <select v-model="store.categorySelector" @change="$emit('findCategory')">
             <option selected>Select Category</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option value="Breaking Bad">Breaking Bad</option>
+            <option value="Better Call Saul">Better Call Saul</option>
         </select>
     </div>
 
