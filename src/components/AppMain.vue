@@ -16,9 +16,13 @@ export default {
     },
     methods: {
         selectCategory() {
-            const categorySelector = this.store.categorySelector
-            const url = `${this.store.API_URL}?category=${categorySelector}`
+            let categorySelector = this.store.categorySelector
+            let url = store.API_URL
             console.log(url);
+
+            if (this.store.categorySelector !== 'Tutte Le Categorie') {
+                url = `${this.store.API_URL}?category=${categorySelector}`
+            }
 
             axios.get(url)
                 .then(response => {

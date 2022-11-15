@@ -5,5 +5,5 @@ export const store = reactive({
     charactersLength: null,
     characters: null,
     error: null,
-    categorySelector: null
+    categorySelector: 'Tutte Le Categorie'
 })

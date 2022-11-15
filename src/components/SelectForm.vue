@@ -14,7 +14,7 @@ export default {
 
     <div class="container">
         <select v-model="store.categorySelector" @change="$emit('findCategory')">
-            <option selected>Select Category</option>
+            <option selected>Tutte Le Categorie</option>
             <option value="Breaking Bad">Breaking Bad</option>
             <option value="Better Call Saul">Better Call Saul</option>
         </select>
